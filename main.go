@@ -11,7 +11,7 @@ import (
 func getRoot(w http.ResponseWriter, r *http.Request) {
 
 	res := fmt.Sprintf(`
-	<h1>Do some Calc</h1>
+	<h1>Do some Addition</h1>
 	<form hx-post="/add" hx-target="#result" hx-swap="afterbegin">
 		<label for="num1">Number 1:</label>
 		<input type="number" name="n1">
