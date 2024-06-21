@@ -16,7 +16,9 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'nohup ./Jenkins &'
+                sh '''
+                    JENKINS_NODE_COOKIE=dontKillMe ./Jenkins 
+                '''
             }
         }
     }
