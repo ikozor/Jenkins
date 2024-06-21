@@ -16,8 +16,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'kill -9 $(lsof -ti :80)'
-                sh './Jenkins'  
+                sh './Jenkins &'  
             }
         }
     }
