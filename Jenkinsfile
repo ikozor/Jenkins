@@ -1,6 +1,8 @@
 pipeline {
     agent any
 
+    tools { go '1.19' }
+
     stages {
         stage('Checkout Code') {
             steps {
@@ -14,13 +16,13 @@ pipeline {
         }
         stage('Build Image') {
             steps {
-                sh 'go build -o '
+                sh 'go build'
             }
         }
         stage('Deploy') {
             steps {
-                sh 'docker-compose down'
-                sh 'docker-compose up -d'  
+                sh 'kill -9 $(lsof -ti :80)'
+                sh './Jenkins'  
             }
         }
     }
