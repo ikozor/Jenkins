@@ -11,7 +11,7 @@ import (
 func getRoot(w http.ResponseWriter, r *http.Request) {
 
 	res := fmt.Sprintf(`
-	<h1>Lets Do Some Addition</h1>
+	<h1>Lets Do Some Fail</h1>
 	<form hx-post="/add" hx-target="#result" hx-swap="afterbegin">
 		<label for="num1">Number 1:</label>
 		<input type="number" name="n1">
@@ -45,7 +45,7 @@ func getAdd(w http.ResponseWriter, r *http.Request) {
 }
 
 func add(x, y int) int {
-	return x + y
+	return x - y
 }
 
 func main() {
