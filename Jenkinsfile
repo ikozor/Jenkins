@@ -16,8 +16,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                export BUILD_ID=dontKillMe
-                nohup ./Jenkins &
+                sh 'nohup ./Jenkins &'
             }
         }
     }
