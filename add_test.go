@@ -14,8 +14,9 @@ func TestAdd(t *testing.T) {
 	}
 
 	for _, tt := range test {
-		if add(tt.x, tt.y) != tt.answer {
-			t.Errorf("%d + %d got %d, expected %d", tt.x, tt.y, tt.answer, tt.x+tt.y)
+		res := add(tt.x, tt.y)
+		if res != tt.answer {
+			t.Errorf("%d + %d got %d, expected %d", tt.x, tt.y, tt.answer, res)
 		}
 	}
 }
