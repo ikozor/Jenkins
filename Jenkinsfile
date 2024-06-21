@@ -4,11 +4,6 @@ pipeline {
     tools { go '1.22.4' }
 
     stages {
-        stage('Checkout Code') {
-            steps {
-                git branch: 'main'
-            }
-        }
         stage('Test Code') {
             steps {
                 sh 'go test .'
