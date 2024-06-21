@@ -51,5 +51,5 @@ func add(x, y int) int {
 func main() {
 	http.HandleFunc("/", getRoot)
 	http.HandleFunc("/add", getAdd)
-	log.Print(http.ListenAndServe(":3000", nil))
+	log.Print(http.ListenAndServe(":80", nil))
 }
