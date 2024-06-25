@@ -1,5 +1,6 @@
-process=$(lsof -ti :80 2>/dev/null)
-if [[ ! -z "$process" ]]; then
+process=$(lsof -ti :80)
+status=$(echo $?)
+if [[ "$status"=="0" ]]; then
     echo "Killing previous server"
     kill -9 $process
 else
