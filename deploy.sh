@@ -7,3 +7,4 @@ else
     echo "No server to kill"
 
 JENKINS_NODE_COOKIE=dontKillMe ./Jenkins &
+fi
